@@ -15,7 +15,7 @@ if (!Number.isFinite(dividend) || !Number.isFinite(divider)) {
   result.innerText = "Something critical went wrong. Please reload the page";
   // Log an error message to the console for debugging
   console.error("Error: Non-numeric input provided");
-  } else if (parseInt(divider) === 0) { // checiking if divider equal 0.
+  } else if (!Number.isInteger(divider)) { // checiking if divider equal 0.
   result.innerText = "Division not performed. Invalid number provided. Try again";
   console.error("Error: Division by zero");
 }
